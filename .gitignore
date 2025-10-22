@@ -1,0 +1,16 @@
+# Virtualenv
+venv/
+.venv/
+
+# Base de datos local
+db.sqlite3
+
+# Archivos de PyCharm
+.idea/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Archivos de medios subidos localmente
+/media/

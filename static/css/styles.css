@@ -1,0 +1,131 @@
+/* --- VARIABLES GLOBALES Y FUENTE --- */
+:root {
+    --bs-body-font-family: 'Poppins', sans-serif;
+    --bs-body-bg: #1a1a1a;
+    --bs-dark-rgb: 33, 37, 41;
+    --color-rosa: #e75480; /* Acento principal (rosa maquillaje) */
+    --color-precio: #20c997;  /* Acento para precios (verde) */
+    --color-card-bg: #212529; /* Fondo de las tarjetas */
+}
+
+body {
+    background-color: var(--bs-body-bg);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: 600; /* Títulos un poco más gruesos */
+}
+
+
+/* --- SECCIÓN HERO (BANNER PRINCIPAL) --- */
+.hero-section {
+    background-color: var(--color-card-bg);
+    padding: 5rem 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: #adb5bd;
+}
+
+.btn-hero {
+    background-color: var(--color-rosa);
+    border-color: var(--color-rosa);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* Botón redondeado */
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+
+/* --- SECCIÓN DE PRODUCTOS (CATÁLOGO) --- */
+.section-title {
+    color: var(--color-rosa);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* La cuadrícula de productos */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* La tarjeta del producto (EL DISEÑO CORRECTO) */
+.producto-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden; /* Importante para que la imagen se ajuste a los bordes */
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* La imagen del producto (LA SOLUCIÓN CORRECTA) */
+.producto-card .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* ¡La propiedad mágica! */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.producto-card .card-body {
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.producto-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.producto-card .categoria {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #adb5bd;
+    margin-bottom: 0.75rem;
+}
+
+.producto-card .precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-precio);
+}
+
+/* Estilos para la página de detalle */
+.precio-detalle {
+    color: var(--color-precio);
+    font-weight: 600;
+}
+
+.badge.bg-pink {
+    background-color: var(--color-rosa) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
